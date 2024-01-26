@@ -13,6 +13,11 @@ public class CountryPopulationService implements ICountryPopulationService {
     private ArrayList<IStatService> _statServices = new ArrayList<IStatService>();
 
     @Override
+    public void RegisterStatService(IStatService service) {
+        _statServices.add(service);
+    }
+
+    @Override
     public List<Pair<String, Integer>> GetPopulation() {
         
         HashMap<String, Integer> countryPopulation = new HashMap<>();
@@ -31,10 +36,5 @@ public class CountryPopulationService implements ICountryPopulationService {
         }
 
         return result;
-    }
-
-    @Override
-    public void RegisterStatService(IStatService service) {
-        _statServices.add(service);
     }
 }
