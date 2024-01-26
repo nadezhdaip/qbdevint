@@ -6,3 +6,4 @@
 build/libs/dev-interview-materials.jar
 .gradle/*
 build/*
+.vscode/*
